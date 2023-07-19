@@ -3,4 +3,14 @@ npm create vite@latest -> cd pasta criada -> npm i -> npm run dev
 npm i typescript ->
 npm i -D eslint ->
 npm i -D prettier ->
+npm i -D eslint-plugin-react
+npm i -D eslint-plugin-react-hooks
+npm i -D @typescript-eslint/parser
+npm i -D @typescript-eslint/eslint-plugin
+npm i styled-components
+npm i react-router-dom
+npm i @types/styled-components
+npm i eslint-config-prettier
+npm i eslint-plugin-prettier
+npm i @babel/preset-typescript
 (-D) = dev dependency
