@@ -1,0 +1,6 @@
+COMANDOS
+npm create vite@latest -> cd pasta criada -> npm i -> npm run dev
+npm i typescript ->
+npm i -D eslint ->
+npm i -D prettier ->
+(-D) = dev dependency
