@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <h1>OI</h1>
+      <h1>Seu fela da égua</h1>
 
     </>
   )

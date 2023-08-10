@@ -13,4 +13,57 @@ npm i @types/styled-components
 npm i eslint-config-prettier
 npm i eslint-plugin-prettier
 npm i @babel/preset-typescript
+npm i @types/jest
+npm i jest
+npm i -D jest-environment-jsdom
+npm i -D jest-styled-components
+npm i react-toastify
+npm i axios
 (-D) = dev dependency
+
+// aula!
+
+Typescript = linguagem de tipagem
+-> interface = A Interface é uma sintaxe do TypeScript que define as especificações de uma entidade. 
+Ou seja, define o contrato, a estrutura de uma Classe, Objeto ou Função. Representação de uma Interface.
+-> void = função sem return/ vazio
+const PokemonContext = () => {
+    interface Car {
+        brand: string
+        model:string
+        year: number
+        price: number
+        // o sinal de interrogação tira a obrigatoriedade 
+        km?: number
+        donos():void
+        
+    }
+    const carro:Car = {
+        brand: "Toyota",
+        model: "Brad Pitt",
+        year: 2010,
+        price: 40000,
+        donos() {
+            console.log("unico dono");
+            
+        },
+    }
+}
+APi
+https://pokeapi.co/api/v2/pokemon
+
+//
+
+const pokemonPoints: Promise<AxiosResponse<Pokemon>>[] = []: Nesta linha, estamos criando uma variável chamada pokemonPoints, que é um array vazio do tipo Promise<AxiosResponse<Pokemon>>. Isso significa que cada elemento desse array será uma Promise que, quando resolvida, retornará uma resposta (response) do Axios contendo dados de um Pokémon.
+
+for (let i = 1; i <= 50; i++) {}: Aqui, iniciamos um loop for que irá iterar 50 vezes, começando do valor 1 e indo até 50.
+
+pokemonPoints.push(axios.get(https://pokeapi.co/api/v2/pokemon/${i}`))`: Dentro do loop, estamos fazendo uma requisição GET para a PokeAPI usando o Axios. Cada requisição busca os dados de um Pokémon específico, onde i é o número do Pokémon na PokeAPI. Essa Promise é adicionada ao array pokemonPoints.
+
+const response = await axios.all(pokemonPoints): Após o loop, usamos axios.all() para esperar que todas as Promises dentro do array pokemonPoints sejam resolvidas. Esse método retorna um array com todas as respostas das requisições feitas.
+
+const fetchedPokemons = response.map((response) => response.data): Aqui, mapeamos o array de respostas (response) e extraímos apenas o data de cada resposta. O data contém os detalhes do Pokémon, como nome, habilidades, tipos, etc.
+
+setPokemons(fetchedPokemons): Por fim, estamos usando uma função setPokemons (provavelmente do React) para atualizar o estado dos Pokémons com os dados obtidos. Isso significa que fetchedPokemons é o novo estado dos Pokémons, contendo informações sobre os 50 Pokémons buscados na PokeAPI.
+
+Em resumo, esse código realiza 50 requisições para a PokeAPI para buscar informações sobre 50 Pokémons diferentes. Quando todas as requisições são concluídas, ele extrai os dados de cada Pokémon e atualiza o estado com essas informações. É uma maneira eficiente de obter dados de vários Pokémons de uma só vez.
