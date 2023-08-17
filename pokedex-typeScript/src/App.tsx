@@ -1,10 +1,14 @@
-
+import Header from './components/Header/Header'
 function App() {
-  
+
 
   return (
     <>
-      <h1>Seu fela da égua</h1>
+      <Header/>
+      <h1 className="text-3xl font-bold text-yellow-300 underline">
+        Hello world! 
+      </h1>
+
 
     </>
   )

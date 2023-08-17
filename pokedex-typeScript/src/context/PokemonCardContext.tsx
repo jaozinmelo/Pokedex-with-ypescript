@@ -117,7 +117,17 @@ interface PokemonCardProviderProps {
     return (
 
 
-      <PokemonCardContext.Provider value={{}}>
+      <PokemonCardContext.Provider value={{pokemonCart,
+        pokemonAmount,
+        searchByNamePokemon,
+        addToPokemon,
+        removePokemon,
+        removeAllClearPokemon,
+        pokemonsPerPage,
+        getCurrentPokemons,
+        nextPage,
+        prevPage
+    }}>
         {children}
       </PokemonCardContext.Provider>
 
