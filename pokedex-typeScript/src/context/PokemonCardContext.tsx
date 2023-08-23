@@ -23,7 +23,7 @@ interface PokemonCardContextData {
 
 
 // CRIAR UMA VARIVEL PARA STARTAR NOSSO CONTEXTO 
-const PokemonCardContext = createContext<PokemonCardContextData> (
+export const PokemonCardContext = createContext<PokemonCardContextData> (
     {} as PokemonCardContextData
 )
 
@@ -31,7 +31,7 @@ interface PokemonCardProviderProps {
     children: ReactNode
 }
 
-    const PokemonCardProvider: React.FC<PokemonCardProviderProps> = ({children}) => {
+export  const PokemonCardProvider: React.FC<PokemonCardProviderProps> = ({children}) => {
     
         const [pokemonCart , setPokemonCart] = useState<PokemonData[]>([])
         const [name,setName] = useState<PokemonData[]>([])
